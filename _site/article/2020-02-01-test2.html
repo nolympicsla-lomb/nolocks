@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <body>
+    <div id="article-content">
+	   <div class="post">
+    <header>
+  	  <!-- <p class="post-header">this is the running title at the top. the default is to display the site title, so to activate the running title you will need to uncomment in the post.html layout</p> -->
+      <!-- OR -->
+      <p class="post-header">#NoLocksOnMyBlock</p>
+
+      <h1 class="post-title">test post 2 - photo upload</h1>
+      <p class="byline">nolympics, 01 Feb 2020</p>
+    </header>
+    <div id="content">
+      <p>Body text goes here in Markdown</p>
+
+<p><img src="images/lock.png" alt="Image title" />
+   {:.image} &lt;– this tag is needed for image formatting and for Lightbox feature –&gt;
+caption.
+   {:.caption} &lt;– this tag is needed for caption formatting and for Lightbox feature –&gt;</p>
+
+<h1 id="header-1">Header 1</h1>
+<h2 id="header-2">Header 2</h2>
+
+    </div>
+</div>
+
+
+<script>
+var images = document.getElementsByClassName("image");
+var caption = document.getElementsByClassName("caption");
+
+for (var i = 0; i < images.length; i++) {
+   	var link = images[i].childNodes[0].src;
+   	images[i].innerHTML = "<a href='" + link + "' data-lightbox=' ' data-title='" + caption[i].innerHTML  + "'>" + images[i].childNodes[0].outerHTML + "</a>";
+}
+
+lightbox.option({
+      'resizeDuration': 200,
+      'wrapAround': true
+ })
+</script>
+
+   </div>
+  </body>
+</html>
