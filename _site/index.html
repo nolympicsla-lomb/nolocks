@@ -51,7 +51,58 @@
 
 
   <body>
+<div class="dropdown">
+ <button class="menu-button dropdown" onclick="dropdowntoggle()"><i class="fa fa-bars" aria-hidden="true"></i></button>
+ 		<div class="dropdown-content sub-menu" onclick="dropdowntoggle()">
+ 		<div class="menu-links">
+ 		<a class="close-btn"><i class="fa fa-times" aria-hidden="true"></i></a>
+ 		<a href="/">Home</a>
+ 		
+ 		
+ 			<a href="/#/analysis/" onclick="onClick('/analysis/')" class="menu-link">Analysis</a>
+		
+		
+ 		
+ 			<a href="/#/article-index/" onclick="onClick('/article-index/')" class="menu-link">All Entries</a>
+		
+		
+ 		
+ 			<a href="/#/credits/" onclick="onClick('/credits/')" class="menu-link">Credits</a>
+		
+		
+ 		
+ 		
+ 		
+ 		
+ 		
+ 		
+		</div>
+</div>
+</div>
+<script>
+function circletoggle() {
+  if ($('.circle-content').css("height") == '0px') {
+   $('.circle-content').css("height", '200px');
+   $('.circle-content').css("width", '200px');
+   $('.circle-content').css("opacity", '.95');
+   $('.menu-button').css("display", "none");
+   
+  } else {
+  	$('.circle-content').css("height", '0px');
+  	$('.circle-content').css("width", '0px');
+  	$('.circle-content').css("opacity", '0');
+  	$('.menu-button').css("display", "inline-block");
+  }
+}
+function dropdowntoggle() {
+  if ($('.dropdown-content').css("display") == 'none') {
+   $('.dropdown-content').css("display", 'block')
+  } else {
+  	$('.dropdown-content').css("display", 'none')
+  }
+}
 
+</script>
   	<div class="sidebar">
     	<div id="sidebar-content"></div>
 </div>
@@ -179,10 +230,6 @@ var icons = [];
 
     
         icons.push('/assets/leaflet/img/noun_33862_cc_teal.svg');
-    
-
-    
-
     
 
     
@@ -338,6 +385,73 @@ var control = L.control.layers(null, null, { collapsed: true, position: 'topleft
 	 overLayers.push({"name":name, icon: imageurl, active: true, "layer":L.layerGroup(layers)})
 	}
  
+counter += 1;
+
+
+var layers = [];
+if (markergrouping == 'grouped') {
+groups[counter] = L.featureGroup.subGroup(markers);
+var control = L.control.layers(null, null, { collapsed: true, position: 'topleft' });
+}
+
+
+      lat = 35.12;
+      lng = -118.270375;
+
+      if ($(window).height() < 600 || $(window).width() < 550){
+      content = "<strong>test post...</strong>";
+      } else {
+      content = "<strong>test post – google street view</strong><br>post type - google street view";
+      }
+
+      var iconurl = "" + icons[counter]
+      var mbox = L.icon({
+            iconUrl: iconurl,
+            iconSize : [46, 50],
+            iconAnchor : [17, 36],
+            popupAnchor : [-1, 8]
+          });
+      var marker = L.marker([lat, lng], {
+        icon: mbox,
+      }).bindPopup(content, {offset:new L.Point(0,-30)});
+      marker.iconURL = iconurl;
+
+      if (markergrouping == 'grouped') {
+    	marker.addTo(groups[counter])
+      } else if (markergrouping == 'single') {
+      	layers.push(marker);
+      }
+
+      filename = "/article/2020-02-06-01-test"
+      if (items[filename] == undefined) {
+      items[filename] = [marker];
+      } else {
+      items[filename].push(marker);
+      }
+
+
+
+      marker.on('click', function(){
+        post_url = "/#/article/2020-02-06-01-test";
+        article_url = '/article/2020-02-06-01-test';
+        item_id = "/article/2020-02-06-01-test";
+        window.location = (post_url);
+        articlerender(article_url, item_id);
+
+      });
+
+      
+
+    var imageurl = '<img class="legend" src="' + iconurl + '">'
+    if (markergrouping == 'grouped') {
+		map.addLayer(markers);
+		var name = imageurl + ' ' + 'street view';
+		overLayers.push({"name":name, "layer":groups[counter]})
+	} else if (markergrouping == 'single') {
+	 var name = 'street view';
+	 overLayers.push({"name":name, icon: imageurl, active: true, "layer":L.layerGroup(layers)})
+	}
+ 
       // end loop through posts
 if (markergrouping == 'grouped') {
 	for (i = 0; i < overLayers.length; i++) {
@@ -362,58 +476,9 @@ map.setView([34.080583, -118.270375], 12)
 return items;
 }
 </script>
-<div class="dropdown">
- <button class="menu-button dropdown" onclick="dropdowntoggle()"><i class="fa fa-bars" aria-hidden="true"></i></button>
- 		<div class="dropdown-content sub-menu" onclick="dropdowntoggle()">
- 		<div class="menu-links">
- 		<a class="close-btn"><i class="fa fa-times" aria-hidden="true"></i></a>
- 		<a href="/">Home</a>
- 		
- 		
- 			<a href="/#/article-index/" onclick="onClick('/article-index/')" class="menu-link">Browse Articles</a>
-		
-		
- 		
- 			<a href="/#/credits/" onclick="onClick('/credits/')" class="menu-link">Credits</a>
-		
-		
- 		
- 		
- 		
- 		
- 		
- 		
-		</div>
-</div>
-</div>
-<script>
-function circletoggle() {
-  if ($('.circle-content').css("height") == '0px') {
-   $('.circle-content').css("height", '200px');
-   $('.circle-content').css("width", '200px');
-   $('.circle-content').css("opacity", '.95');
-   $('.menu-button').css("display", "none");
-   
-  } else {
-  	$('.circle-content').css("height", '0px');
-  	$('.circle-content').css("width", '0px');
-  	$('.circle-content').css("opacity", '0');
-  	$('.menu-button').css("display", "inline-block");
-  }
-}
-function dropdowntoggle() {
-  if ($('.dropdown-content').css("display") == 'none') {
-   $('.dropdown-content').css("display", 'block')
-  } else {
-  	$('.dropdown-content').css("display", 'none')
-  }
-}
-
-</script>
-<select id="choose" class="dropdown" onchange="change_map()">
+<!--<select id="choose" class="dropdown" onchange="change_map()">
     <option value="grouped">Clustered</option>
     <option value="single">Not clustered</option>
-</select>
-
+</select> -->
 </body>
 </html>

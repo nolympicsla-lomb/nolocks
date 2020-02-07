@@ -1,5 +1,9 @@
 ---
 layout: home
-title: "tristan friedberg rodman"
+title: "#NoLocksOnMyBlock"
 ---
+About copy here.
 
+[Analysis](/#/analysis/)
+
+[Share Your Story](/#/share/)

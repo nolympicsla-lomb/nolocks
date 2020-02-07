@@ -202,15 +202,23 @@ ul {
 	border-radius: 50%;
 }
 
+.dropdown {
+  right: 0vw !important;
+  z-index: 100;
+  border-radius: 5px;
+}
+
 .dropdown-content {
+    right: 0vw !important;
+    z-index: 100 !important;
     display: none;
     position: absolute;
-    background-color: #5181ff;
     z-index: 1;
-    border-radius: 10px;
+    border-radius: 5px;
     right: 0;
     left: auto;
     padding-bottom: 10px;
+    background-color: #5181ff;
 }
 
 .dropdown-content a {
@@ -224,7 +232,7 @@ ul {
 
 .dropdown-content a:hover {
     background-color: rgba(0, 0, 0, .4);
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 #choose {
