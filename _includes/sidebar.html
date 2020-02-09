@@ -5,9 +5,10 @@
 		{% if site.exclude_pages contains page.path or page.path contains 'css' %}
 		{% continue %}
 		{% else %}
-			<a href="{{site.baseurl}}/#{{page.url}}" onclick="onClick('{{page.url}}')" class="menu-link">{{page.title}}</a>
+			| <a href="{{site.baseurl}}/#{{page.url}}" onclick="onClick('{{page.url}}')" class="menu-link">{{page.title}}</a>
 		{% endif %}
 		{% endfor %}
+		| <a href="http://www.google.com" target="_blank">Share Your Story</a>
 	</div>
 	<div id="sidebar-content"></div>
 </div>

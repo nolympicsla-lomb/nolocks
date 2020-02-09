@@ -1,4 +1,4 @@
 ---
 layout: article-index
-title: All Entries
+title: Index
 ---

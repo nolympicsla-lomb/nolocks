@@ -63,11 +63,7 @@
 		
 		
  		
- 			<a href="/#/article-index/" onclick="onClick('/article-index/')" class="menu-link">All Entries</a>
-		
-		
- 		
- 			<a href="/#/credits/" onclick="onClick('/credits/')" class="menu-link">Credits</a>
+ 			<a href="/#/article-index/" onclick="onClick('/article-index/')" class="menu-link">Index</a>
 		
 		
  		
@@ -76,10 +72,6 @@
  		
  		
  		
- 		
- 			<a href="/#/share/" onclick="onClick('/share/')" class="menu-link">Share Your Story</a>
-		
-		
 		</div>
 </div>
 </div>
@@ -112,15 +104,11 @@ function dropdowntoggle() {
 		<a href="/">Home</a>
 		
 		
-			<a href="/#/analysis/" onclick="onClick('/analysis/')" class="menu-link">Analysis</a>
+			| <a href="/#/analysis/" onclick="onClick('/analysis/')" class="menu-link">Analysis</a>
 		
 		
 		
-			<a href="/#/article-index/" onclick="onClick('/article-index/')" class="menu-link">All Entries</a>
-		
-		
-		
-			<a href="/#/credits/" onclick="onClick('/credits/')" class="menu-link">Credits</a>
+			| <a href="/#/article-index/" onclick="onClick('/article-index/')" class="menu-link">Index</a>
 		
 		
 		
@@ -129,10 +117,7 @@ function dropdowntoggle() {
 		
 		
 		
-		
-			<a href="/#/share/" onclick="onClick('/share/')" class="menu-link">Share Your Story</a>
-		
-		
+		| <a href="http://www.google.com" target="_blank">Share Your Story</a>
 	</div>
 	<div id="sidebar-content"></div>
 </div>
@@ -174,7 +159,7 @@ var markers = ''
           //map = L.map('map' , {scrollWheelZoom: false}).setView([0, 0], 1);
           var map = map;
 
-      L.tileLayer('https://api.mapbox.com/styles/v1/kirschbombe/cje1t61823u2p2rrwv3u68kf3/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoia2lyc2NoYm9tYmUiLCJhIjoiMTQxVVBocyJ9.vWLKsRKrVWU-WG2QlMb6kA', {
+      L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/dark-v10/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoidHJpc3RhbnJvZG1hbiIsImEiOiJjamRqNnoxYmgxaGJiMnZvMTN0cmNqcGllIn0.qHhBop6hCUKWKE7ZETKocg', {
         "attribution" : '<a target="_blank" href="https://github.com/kirschbombe/flaneur">Flâneur</a> | Tiles: Mapbox',
         "minZoom" : 0,
         "maxZoom" : 20,
@@ -219,7 +204,9 @@ var icons = [];
     
 
     
-        icons.push('/assets/leaflet/img/noun_33862_cc_aqua.svg');
+
+    
+        icons.push('/assets/leaflet/img/noun_33862_cc_awhite.svg');
     
 
     
@@ -232,6 +219,10 @@ var icons = [];
 
     
         icons.push('/assets/leaflet/img/noun_33862_cc_green.svg');
+    
+
+    
+        icons.push('/assets/leaflet/img/noun_33862_cc_hunter.svg');
     
 
     
@@ -441,13 +432,59 @@ var control = L.control.layers(null, null, { collapsed: true, position: 'topleft
 }
 
 
+      lat = 34.01;
+      lng = -118.270375;
+
+      if ($(window).height() < 600 || $(window).width() < 550){
+      content = "<strong>test post...</strong>";
+      } else {
+      content = "<strong>test post two - photo upload</strong><br>";
+      }
+
+      var iconurl = "" + icons[counter]
+      var mbox = L.icon({
+            iconUrl: iconurl,
+            iconSize : [46, 50],
+            iconAnchor : [17, 36],
+            popupAnchor : [-1, 8]
+          });
+      var marker = L.marker([lat, lng], {
+        icon: mbox,
+      }).bindPopup(content, {offset:new L.Point(0,-30)});
+      marker.iconURL = iconurl;
+
+      if (markergrouping == 'grouped') {
+    	marker.addTo(groups[counter])
+      } else if (markergrouping == 'single') {
+      	layers.push(marker);
+      }
+
+      filename = "/article/2020-02-01-test2"
+      if (items[filename] == undefined) {
+      items[filename] = [marker];
+      } else {
+      items[filename].push(marker);
+      }
+
+
+
+      marker.on('click', function(){
+        post_url = "/#/article/2020-02-01-test2";
+        article_url = '/article/2020-02-01-test2';
+        item_id = "/article/2020-02-01-test2";
+        window.location = (post_url);
+        articlerender(article_url, item_id);
+
+      });
+
+      
       lat = 34.080583;
       lng = -118.270375;
 
       if ($(window).height() < 600 || $(window).width() < 550){
       content = "<strong>test post...</strong>";
       } else {
-      content = "<strong>test post 1 – instagram embed</strong><br>post type - instagram embed";
+      content = "<strong>test post one – instagram embed</strong><br>subheading";
       }
 
       var iconurl = "" + icons[counter]
@@ -491,144 +528,10 @@ var control = L.control.layers(null, null, { collapsed: true, position: 'topleft
     var imageurl = '<img class="legend" src="' + iconurl + '">'
     if (markergrouping == 'grouped') {
 		map.addLayer(markers);
-		var name = imageurl + ' ' + 'illegal airbnbs';
-		overLayers.push({"name":name, "layer":groups[counter]})
-	} else if (markergrouping == 'single') {
-	 var name = 'illegal airbnbs';
-	 overLayers.push({"name":name, icon: imageurl, active: true, "layer":L.layerGroup(layers)})
-	}
- 
-counter += 1;
-
-
-var layers = [];
-if (markergrouping == 'grouped') {
-groups[counter] = L.featureGroup.subGroup(markers);
-var control = L.control.layers(null, null, { collapsed: true, position: 'topleft' });
-}
-
-
-      lat = 34.01;
-      lng = -118.270375;
-
-      if ($(window).height() < 600 || $(window).width() < 550){
-      content = "<strong>test post...</strong>";
-      } else {
-      content = "<strong>test post 2 - photo upload</strong><br>post type - photo upload";
-      }
-
-      var iconurl = "" + icons[counter]
-      var mbox = L.icon({
-            iconUrl: iconurl,
-            iconSize : [46, 50],
-            iconAnchor : [17, 36],
-            popupAnchor : [-1, 8]
-          });
-      var marker = L.marker([lat, lng], {
-        icon: mbox,
-      }).bindPopup(content, {offset:new L.Point(0,-30)});
-      marker.iconURL = iconurl;
-
-      if (markergrouping == 'grouped') {
-    	marker.addTo(groups[counter])
-      } else if (markergrouping == 'single') {
-      	layers.push(marker);
-      }
-
-      filename = "/article/2020-02-01-test2"
-      if (items[filename] == undefined) {
-      items[filename] = [marker];
-      } else {
-      items[filename].push(marker);
-      }
-
-
-
-      marker.on('click', function(){
-        post_url = "/#/article/2020-02-01-test2";
-        article_url = '/article/2020-02-01-test2';
-        item_id = "/article/2020-02-01-test2";
-        window.location = (post_url);
-        articlerender(article_url, item_id);
-
-      });
-
-      
-
-    var imageurl = '<img class="legend" src="' + iconurl + '">'
-    if (markergrouping == 'grouped') {
-		map.addLayer(markers);
 		var name = imageurl + ' ' + 'user-submitted';
 		overLayers.push({"name":name, "layer":groups[counter]})
 	} else if (markergrouping == 'single') {
 	 var name = 'user-submitted';
-	 overLayers.push({"name":name, icon: imageurl, active: true, "layer":L.layerGroup(layers)})
-	}
- 
-counter += 1;
-
-
-var layers = [];
-if (markergrouping == 'grouped') {
-groups[counter] = L.featureGroup.subGroup(markers);
-var control = L.control.layers(null, null, { collapsed: true, position: 'topleft' });
-}
-
-
-      lat = 35.12;
-      lng = -118.270375;
-
-      if ($(window).height() < 600 || $(window).width() < 550){
-      content = "<strong>test post...</strong>";
-      } else {
-      content = "<strong>test post – google street view</strong><br>post type - google street view";
-      }
-
-      var iconurl = "" + icons[counter]
-      var mbox = L.icon({
-            iconUrl: iconurl,
-            iconSize : [46, 50],
-            iconAnchor : [17, 36],
-            popupAnchor : [-1, 8]
-          });
-      var marker = L.marker([lat, lng], {
-        icon: mbox,
-      }).bindPopup(content, {offset:new L.Point(0,-30)});
-      marker.iconURL = iconurl;
-
-      if (markergrouping == 'grouped') {
-    	marker.addTo(groups[counter])
-      } else if (markergrouping == 'single') {
-      	layers.push(marker);
-      }
-
-      filename = "/article/2020-02-06-01-test"
-      if (items[filename] == undefined) {
-      items[filename] = [marker];
-      } else {
-      items[filename].push(marker);
-      }
-
-
-
-      marker.on('click', function(){
-        post_url = "/#/article/2020-02-06-01-test";
-        article_url = '/article/2020-02-06-01-test';
-        item_id = "/article/2020-02-06-01-test";
-        window.location = (post_url);
-        articlerender(article_url, item_id);
-
-      });
-
-      
-
-    var imageurl = '<img class="legend" src="' + iconurl + '">'
-    if (markergrouping == 'grouped') {
-		map.addLayer(markers);
-		var name = imageurl + ' ' + 'street view';
-		overLayers.push({"name":name, "layer":groups[counter]})
-	} else if (markergrouping == 'single') {
-	 var name = 'street view';
 	 overLayers.push({"name":name, icon: imageurl, active: true, "layer":L.layerGroup(layers)})
 	}
  
@@ -650,7 +553,7 @@ map.addControl(panelLayers);
 
 }
 
-map.setView([34.080583, -118.270375], 12)
+map.setView([34.080583, -118.270375], 10)
 
 //map.fitBounds(markers.getBounds());
 return items;

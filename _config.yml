@@ -12,7 +12,7 @@ markdown: kramdown
 encoding: utf-8
 
 # --STYLES--
-accent_color: '#AD1616'  # accent color can be any css accepted value
+accent_color: 'black'  # accent color can be any css accepted value
 accent_font: Folsom  # Gogle Fonts import link is in head.html. You can specify the accent font here and it will add it to the main.css
 
 # --SOCIAL--
@@ -21,12 +21,12 @@ github_username:  simulcast
 email: no@nolympcsla.com
 
 # --MAP SETTINGS--
-map-tileset: 'https://api.mapbox.com/styles/v1/kirschbombe/cje1t61823u2p2rrwv3u68kf3/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoia2lyc2NoYm9tYmUiLCJhIjoiMTQxVVBocyJ9.vWLKsRKrVWU-WG2QlMb6kA'
+map-tileset: 'https://api.mapbox.com/styles/v1/mapbox/dark-v10/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoidHJpc3RhbnJvZG1hbiIsImEiOiJjamRqNnoxYmgxaGJiMnZvMTN0cmNqcGllIn0.qHhBop6hCUKWKE7ZETKocg'
 # replace "cje..." with map ID, "kirschbombe" with username, and swap out access_token to change map style
 map-credits: '<a target="_blank" href="https://github.com/kirschbombe/flaneur">Flâneur</a> | Tiles: Mapbox'
 minZoom: 0
 maxZoom: 20
-setView: '[34.080583, -118.270375], 12'  # set map center point and zoom. See http://leafletjs.com/reference-1.2.0.html for more info.
+setView: '[34.080583, -118.270375], 10'  # set map center point and zoom. See http://leafletjs.com/reference-1.2.0.html for more info.
 marker-grouping: single # sets the default clustering action. Options: grouped, single
 
 # Truncates map marker popup on small screens to only display post title
