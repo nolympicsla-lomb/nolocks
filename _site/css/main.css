@@ -18,8 +18,8 @@ html {
 }
 
 h1, h2, h3, h4 {
-  font-family: 'Space Mono';
-  color: #5181ff;
+  font-family: 'Folsom';
+  color: #AD1616;
 }
 
 h3 {
@@ -55,9 +55,19 @@ h1.home-title {
 }
 
 a {
-  color: #5181ff;
+  color: #AD1616;
   text-decoration: none;
   font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Folsom';
+  src: url('/fonts/folsom/folsom-black-web.eot'); /* IE9 Compat Modes */
+  src: url('/fonts/folsom/folsom-black-web.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/fonts/folsom/folsom-black-web.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/fonts/folsom/folsom-black-web.woff') format('woff'), /* Pretty Modern Browsers */
+       url('/fonts/folsom/folsom-black-web.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('/fonts/folsom/folsom-black-web.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 
 .container {
@@ -85,11 +95,24 @@ a {
 	overflow:auto;
 }
 
+.titlebar {
+  width:40vw;
+  background-color: white;
+  text-align: right;
+  font-family: Folsom;
+  text-decoration: underline;
+  position: fixed;
+  right: 0px;
+  z-index: 100 !important;
+  padding: 1em;
+}
+
 div#sidebar-content {
   padding: 3em;
 }
 
 p.post-header {
+  font-family: Folsom;
   letter-spacing: 1.5px;
   margin-bottom: .5rem;
   font-size: .8em;
@@ -170,7 +193,7 @@ ul {
 	width: 0;
 	top: 0;
 	position: absolute;
-	background-color: #5181ff;
+	background-color: #AD1616;
 	border-radius: 50%;
 	z-index: 18;
 	overflow: hidden;
@@ -188,7 +211,7 @@ ul {
 }
 
 .menu-button {
-    background-color: #5181ff;
+    background-color: #AD1616;
     color: white;
     padding: 15px;
     font-size: 16px;
@@ -208,17 +231,20 @@ ul {
   border-radius: 5px;
 }
 
+.dropdown {
+  display: none;
+}
 .dropdown-content {
     right: 0vw !important;
     z-index: 100 !important;
     display: none;
     position: absolute;
     z-index: 1;
-    border-radius: 5px;
+    border-radius: 12px;
     right: 0;
     left: auto;
     padding-bottom: 10px;
-    background-color: #5181ff;
+    background-color: #AD1616;
 }
 
 .dropdown-content a {
@@ -236,7 +262,7 @@ ul {
 }
 
 #choose {
-background-color: #5181ff;
+background-color: #AD1616;
 color: white;
 padding: 15px;
 font-size: 16px;
@@ -360,6 +386,18 @@ display: inline-block;
       top: 40vh;
   }
 
+  .dropdown {
+    display: block;
+  }
+
+  .titlebar {
+    display: none;
+  }
+
+  div#sidebar-content {
+    padding: 1em;
+  }
+
   .sub-menu, .menu-button {
 	   right: 0vw;
   }
@@ -437,10 +475,10 @@ div.leaflet-control-layers-overlays {
 z-index: 0;
 }
 .marker-cluster-small div, .marker-cluster-medium div, .marker-cluster-large div {
-	background-color: #5181ff;
+	background-color: #AD1616;
 }
 .marker-cluster-small, .marker-cluster-medium, .marker-cluster-large {
-	background-color: #5181ff;
+	background-color: #AD1616;
 	color: white;
 }
 

@@ -76,6 +76,10 @@
  		
  		
  		
+ 		
+ 			<a href="/#/share/" onclick="onClick('/share/')" class="menu-link">Share Your Story</a>
+		
+		
 		</div>
 </div>
 </div>
@@ -104,7 +108,33 @@ function dropdowntoggle() {
 
 </script>
   	<div class="sidebar">
-    	<div id="sidebar-content"></div>
+	<div class="titlebar">
+		<a href="/">Home</a>
+		
+		
+			<a href="/#/analysis/" onclick="onClick('/analysis/')" class="menu-link">Analysis</a>
+		
+		
+		
+			<a href="/#/article-index/" onclick="onClick('/article-index/')" class="menu-link">All Entries</a>
+		
+		
+		
+			<a href="/#/credits/" onclick="onClick('/credits/')" class="menu-link">Credits</a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			<a href="/#/share/" onclick="onClick('/share/')" class="menu-link">Share Your Story</a>
+		
+		
+	</div>
+	<div id="sidebar-content"></div>
 </div>
 
   	   <script>
@@ -230,6 +260,156 @@ var icons = [];
 
     
         icons.push('/assets/leaflet/img/noun_33862_cc_teal.svg');
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
     
 
     
@@ -378,10 +558,10 @@ var control = L.control.layers(null, null, { collapsed: true, position: 'topleft
     var imageurl = '<img class="legend" src="' + iconurl + '">'
     if (markergrouping == 'grouped') {
 		map.addLayer(markers);
-		var name = imageurl + ' ' + 'ellis evictions';
+		var name = imageurl + ' ' + 'user-submitted';
 		overLayers.push({"name":name, "layer":groups[counter]})
 	} else if (markergrouping == 'single') {
-	 var name = 'ellis evictions';
+	 var name = 'user-submitted';
 	 overLayers.push({"name":name, icon: imageurl, active: true, "layer":L.layerGroup(layers)})
 	}
  
