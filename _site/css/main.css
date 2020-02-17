@@ -11,15 +11,15 @@ body {
 }
 
 html {
-  font-family: 'Lato', sans-serif;
+  font-family: 'CerealLight', sans-serif;
   font-weight: 300;
   font-size: 16px;
   line-height: 1.5;
 }
 
 h1, h2, h3, h4 {
-  font-family: 'Folsom';
-  color: black;
+  font-family: 'CerealExtraBold';
+  color: #ff5a5f;
 }
 
 h3 {
@@ -55,7 +55,7 @@ h1.home-title {
 }
 
 a {
-  color: black;
+  color: #ff5a5f;
   text-decoration: none;
   font-weight: 400;
 }
@@ -69,6 +69,37 @@ a {
        url('/fonts/folsom/folsom-black-web.ttf')  format('truetype'), /* Safari, Android, iOS */
        url('/fonts/folsom/folsom-black-web.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
+
+@font-face {
+  font-family: 'CerealBlack';
+  src: url('/fonts/cereal/AirbnbCereal-Black.otf');
+}
+
+@font-face {
+  font-family: 'CerealBold';
+  src: url('/fonts/cereal/AirbnbCereal-Bold.otf');
+}
+
+@font-face {
+  font-family: 'CerealBook';
+  src: url('/fonts/cereal/AirbnbCereal-Book.otf');
+}
+
+@font-face {
+  font-family: 'CerealExtraBold';
+  src: url('/fonts/cereal/AirbnbCereal-ExtraBold.otf');
+}
+
+@font-face {
+  font-family: 'CerealLight';
+  src: url('/fonts/cereal/AirbnbCereal-Light.otf');
+}
+
+@font-face {
+  font-family: 'CerealMedium';
+  src: url('/fonts/cereal/AirbnbCereal-Medium.otf');
+}
+
 
 .container {
 	width: 100%;
@@ -85,6 +116,11 @@ a {
 	padding-bottom: 3em;
 } */
 
+strong {
+  font-family: 'CerealBold';
+  color: #ff5a5f;
+}
+
 .sidebar {
 	height:100vh;
 	width:40vw;
@@ -98,8 +134,9 @@ a {
 .titlebar {
   width:40vw;
   background-color: white;
+  color: #ff5a5f;
   text-align: right;
-  font-family: Folsom;
+  font-family: CerealExtraBold;
   position: fixed;
   right: 0px;
   z-index: 100 !important;
@@ -111,11 +148,11 @@ div#sidebar-content {
 }
 
 p.post-header {
-  font-family: Folsom;
+  font-family: CerealExtraBold;
+  color: #ff5a5f;
   letter-spacing: 1.5px;
   margin-bottom: .5rem;
   font-size: .8em;
-  font-style: italic;
   border-width: 0 0 1px;
   border-style: dotted;
   line-height: 17px;
@@ -148,6 +185,12 @@ p.citation {
   text-align: left;
 }
 
+.logo {
+  max-width: 80%;
+  display: block;
+  margin: auto;
+}
+
 p.image img, img.home-icon {
   max-height: 400px;
   max-width: 80%;
@@ -171,9 +214,9 @@ ul {
 
 .index-button {
   background-color: white;
-  color: black;
+  color: #ff5a5f;
   font-size: 14px;
-  border: .5px solid rgba(96, 74, 120, 1);
+  border: .5px solid #ff5a5f;
   padding: .1px 10px 1px 10px;
   text-align: center;
   text-decoration: none;
@@ -192,7 +235,7 @@ ul {
 	width: 0;
 	top: 0;
 	position: absolute;
-	background-color: black;
+	background-color: #ff5a5f;
 	border-radius: 50%;
 	z-index: 18;
 	overflow: hidden;
@@ -210,7 +253,7 @@ ul {
 }
 
 .menu-button {
-    background-color: black;
+    background-color: #ff5a5f;
     color: white;
     padding: 15px;
     font-size: 16px;
@@ -243,7 +286,7 @@ ul {
     right: 0;
     left: auto;
     padding-bottom: 10px;
-    background-color: black;
+    background-color: #ff5a5f;
 }
 
 .dropdown-content a {
@@ -261,7 +304,7 @@ ul {
 }
 
 #choose {
-background-color: black;
+background-color: #ff5a5f;
 color: white;
 padding: 15px;
 font-size: 16px;
@@ -454,19 +497,27 @@ img.article-marker {
 	vertical-align: middle;
 }
 
+.leaflet-control-container {
+  font-family: "CerealMedium"
+}
+
+.leaflet-control-attribution {
+  display: none;
+}
+
 .leaflet-popup-content-wrapper, .leaflet-popup-tip {
-  font-family: "Lato", sans-serif;
+  font-family: "CerealMedium", sans-serif;
   font-weight: 300;
   font-size: 14px;
 }
 
 label.leaflet-panel-layers-title {
-  font-family: "Lato", sans-serif;
+  font-family: "CerealMedium", sans-serif;
   font-weight: 300;
   text-transform: uppercase;
 }
 div.leaflet-control-layers-overlays {
-  font-family: "Lato", sans-serif;
+  font-family: "CerealMedium", sans-serif;
   font-weight: 300;
   text-transform: uppercase;
   font-size: .9em;
@@ -480,10 +531,10 @@ div.leaflet-control-layers-overlays {
 z-index: 0;
 }
 .marker-cluster-small div, .marker-cluster-medium div, .marker-cluster-large div {
-	background-color: black;
+	background-color: #ff5a5f;
 }
 .marker-cluster-small, .marker-cluster-medium, .marker-cluster-large {
-	background-color: black;
+	background-color: #ff5a5f;
 	color: white;
 }
 

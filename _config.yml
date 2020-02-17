@@ -12,8 +12,8 @@ markdown: kramdown
 encoding: utf-8
 
 # --STYLES--
-accent_color: 'black'  # accent color can be any css accepted value
-accent_font: Folsom  # Gogle Fonts import link is in head.html. You can specify the accent font here and it will add it to the main.css
+accent_color: '#ff5a5f' # accent color can be any css accepted value
+accent_font: CerealExtraBold  # Gogle Fonts import link is in head.html. You can specify the accent font here and it will add it to the main.css
 
 # --SOCIAL--
 twitter_username: nolympicsla
@@ -21,8 +21,11 @@ github_username:  simulcast
 email: no@nolympcsla.com
 
 # --MAP SETTINGS--
-map-tileset: 'https://api.mapbox.com/styles/v1/mapbox/dark-v10/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoidHJpc3RhbnJvZG1hbiIsImEiOiJjamRqNnoxYmgxaGJiMnZvMTN0cmNqcGllIn0.qHhBop6hCUKWKE7ZETKocg'
+map-tileset: 'https://api.mapbox.com/styles/v1/tristanrodman/ck6bor9xh10na1iqsmcbtt3tl/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoidHJpc3RhbnJvZG1hbiIsImEiOiJjamRqNnoxYmgxaGJiMnZvMTN0cmNqcGllIn0.qHhBop6hCUKWKE7ZETKocg'
 # replace "cje..." with map ID, "kirschbombe" with username, and swap out access_token to change map style
+#mapbox://styles/tristanrodman/ck6bor9xh10na1iqsmcbtt3tl
+#mapbox://styles/tristanrodman/ck6py0pvx4dm81iqryhhd5wz4
+# https://api.mapbox.com/styles/v1/tristanrodman/ck6py0pvx4dm81iqryhhd5wz4.html?fresh=true&title=view&access_token=pk.eyJ1IjoidHJpc3RhbnJvZG1hbiIsImEiOiJjamRqNnoxYmgxaGJiMnZvMTN0cmNqcGllIn0.qHhBop6hCUKWKE7ZETKocg
 map-credits: '<a target="_blank" href="https://github.com/kirschbombe/flaneur">Flâneur</a> | Tiles: Mapbox'
 minZoom: 0
 maxZoom: 20
