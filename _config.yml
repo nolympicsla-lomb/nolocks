@@ -23,6 +23,7 @@ email: no@nolympcsla.com
 # --MAP SETTINGS--
 map-tileset: 'https://api.mapbox.com/styles/v1/tristanrodman/ck6bor9xh10na1iqsmcbtt3tl/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoidHJpc3RhbnJvZG1hbiIsImEiOiJjamRqNnoxYmgxaGJiMnZvMTN0cmNqcGllIn0.qHhBop6hCUKWKE7ZETKocg'
 # replace "cje..." with map ID, "kirschbombe" with username, and swap out access_token to change map style
+#mapbox://styles/tristanrodman/ck6bor9xh10na1iqsmcbtt3tl/draft
 #mapbox://styles/tristanrodman/ck6bor9xh10na1iqsmcbtt3tl
 #mapbox://styles/tristanrodman/ck6py0pvx4dm81iqryhhd5wz4
 # https://api.mapbox.com/styles/v1/tristanrodman/ck6py0pvx4dm81iqryhhd5wz4.html?fresh=true&title=view&access_token=pk.eyJ1IjoidHJpc3RhbnJvZG1hbiIsImEiOiJjamRqNnoxYmgxaGJiMnZvMTN0cmNqcGllIn0.qHhBop6hCUKWKE7ZETKocg

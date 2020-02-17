@@ -482,6 +482,10 @@ display: inline-block;
   display: none;
 }
 
+.leaflet-panel-layers-list {
+  display: none;
+}
+
 
 img.legend {
 	height: 24px;
