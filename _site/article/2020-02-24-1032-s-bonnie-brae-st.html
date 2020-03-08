@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <body>
+    <div id="article-content">
+	   <div class="post">
+    <header>
+  	  <!-- <p class="post-header">Running title here</p> -->
+      <!-- OR -->
+      <p class="post-header">#NoLocksOnMyBlock</p>
+
+      <h1 class="post-title">1032 S Bonnie Brae St</h1>
+      <p class="byline">spotted by nolympics, 24 Feb 2020</p>
+    </header>
+    <div id="content">
+      <p><strong>Address</strong>
+Property at 1032 S Bonnie Brae St, Los Angeles, CA</p>
+
+<p><strong>Story</strong></p>
+
+<p><strong>Pictures</strong></p>
+
+<p><img src="" alt="Image title" />
+    {:.image}</p>
+
+
+    </div>
+</div>
+
+
+<script>
+var images = document.getElementsByClassName("image");
+var caption = document.getElementsByClassName("caption");
+
+for (var i = 0; i < images.length; i++) {
+   	var link = images[i].childNodes[0].src;
+   	images[i].innerHTML = "<a href='" + link + "' data-lightbox=' ' data-title='" + caption[i].innerHTML  + "'>" + images[i].childNodes[0].outerHTML + "</a>";
+}
+
+lightbox.option({
+      'resizeDuration': 200,
+      'wrapAround': true
+ })
+</script>
+
+   </div>
+  </body>
+</html>

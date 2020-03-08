@@ -437,6 +437,8 @@ var icons = [];
 
     
 
+    
+
 
 var counter = -1;
 var groups = {};
@@ -452,6 +454,742 @@ var control = L.control.layers(null, null, { collapsed: true, position: 'topleft
 }
 
 
+      lat = 34.04828;
+      lng = -118.27798;
+
+      if ($(window).height() < 600 || $(window).width() < 550){
+      content = "<strong>1123 s...</strong>";
+      } else {
+      content = "<strong>1123 s burlington ave</strong><br>1123 S Burlington Ave, Los Angeles, CA";
+      }
+
+      var iconurl = "" + icons[counter]
+      var mbox = L.icon({
+            iconUrl: iconurl,
+            iconSize : [46, 50],
+            iconAnchor : [17, 36],
+            popupAnchor : [-1, 8]
+          });
+      var marker = L.marker([lat, lng], {
+        icon: mbox,
+      }).bindPopup(content, {offset:new L.Point(0,-30)});
+      marker.iconURL = iconurl;
+
+      if (markergrouping == 'grouped') {
+    	marker.addTo(groups[counter])
+      } else if (markergrouping == 'single') {
+      	layers.push(marker);
+      }
+
+      filename = "/article/2020-02-24-1123-s-burlington-ave"
+      if (items[filename] == undefined) {
+      items[filename] = [marker];
+      } else {
+      items[filename].push(marker);
+      }
+
+
+
+      marker.on('click', function(){
+        post_url = "/#/article/2020-02-24-1123-s-burlington-ave";
+        article_url = '/article/2020-02-24-1123-s-burlington-ave';
+        item_id = "/article/2020-02-24-1123-s-burlington-ave";
+        window.location = (post_url);
+        articlerender(article_url, item_id);
+
+      });
+
+      
+      lat = 34.050029;
+      lng = -118.277824;
+
+      if ($(window).height() < 600 || $(window).width() < 550){
+      content = "<strong>1042 s...</strong>";
+      } else {
+      content = "<strong>1042 s bonnie brae street</strong><br>1042 S Bonnie Brae St, Los Angeles, CA";
+      }
+
+      var iconurl = "" + icons[counter]
+      var mbox = L.icon({
+            iconUrl: iconurl,
+            iconSize : [46, 50],
+            iconAnchor : [17, 36],
+            popupAnchor : [-1, 8]
+          });
+      var marker = L.marker([lat, lng], {
+        icon: mbox,
+      }).bindPopup(content, {offset:new L.Point(0,-30)});
+      marker.iconURL = iconurl;
+
+      if (markergrouping == 'grouped') {
+    	marker.addTo(groups[counter])
+      } else if (markergrouping == 'single') {
+      	layers.push(marker);
+      }
+
+      filename = "/article/2020-02-24-1042-s-bonnie-brae-street"
+      if (items[filename] == undefined) {
+      items[filename] = [marker];
+      } else {
+      items[filename].push(marker);
+      }
+
+
+
+      marker.on('click', function(){
+        post_url = "/#/article/2020-02-24-1042-s-bonnie-brae-street";
+        article_url = '/article/2020-02-24-1042-s-bonnie-brae-street';
+        item_id = "/article/2020-02-24-1042-s-bonnie-brae-street";
+        window.location = (post_url);
+        articlerender(article_url, item_id);
+
+      });
+
+      
+      lat = 34.049841;
+      lng = -118.278042;
+
+      if ($(window).height() < 600 || $(window).width() < 550){
+      content = "<strong>1032 S...</strong>";
+      } else {
+      content = "<strong>1032 S Bonnie Brae St</strong><br>1032 S Bonnie Brae St, Los Angeles, CA";
+      }
+
+      var iconurl = "" + icons[counter]
+      var mbox = L.icon({
+            iconUrl: iconurl,
+            iconSize : [46, 50],
+            iconAnchor : [17, 36],
+            popupAnchor : [-1, 8]
+          });
+      var marker = L.marker([lat, lng], {
+        icon: mbox,
+      }).bindPopup(content, {offset:new L.Point(0,-30)});
+      marker.iconURL = iconurl;
+
+      if (markergrouping == 'grouped') {
+    	marker.addTo(groups[counter])
+      } else if (markergrouping == 'single') {
+      	layers.push(marker);
+      }
+
+      filename = "/article/2020-02-24-1032-s-bonnie-brae-st"
+      if (items[filename] == undefined) {
+      items[filename] = [marker];
+      } else {
+      items[filename].push(marker);
+      }
+
+
+
+      marker.on('click', function(){
+        post_url = "/#/article/2020-02-24-1032-s-bonnie-brae-st";
+        article_url = '/article/2020-02-24-1032-s-bonnie-brae-st';
+        item_id = "/article/2020-02-24-1032-s-bonnie-brae-st";
+        window.location = (post_url);
+        articlerender(article_url, item_id);
+
+      });
+
+      
+      lat = 34.047679;
+      lng = -118.217785;
+
+      if ($(window).height() < 600 || $(window).width() < 550){
+      content = "<strong>1834 Pennsylvania...</strong>";
+      } else {
+      content = "<strong>1834 Pennsylvania Ave</strong><br>1834 Pennsylvania Ave, Los Angeles, CA";
+      }
+
+      var iconurl = "" + icons[counter]
+      var mbox = L.icon({
+            iconUrl: iconurl,
+            iconSize : [46, 50],
+            iconAnchor : [17, 36],
+            popupAnchor : [-1, 8]
+          });
+      var marker = L.marker([lat, lng], {
+        icon: mbox,
+      }).bindPopup(content, {offset:new L.Point(0,-30)});
+      marker.iconURL = iconurl;
+
+      if (markergrouping == 'grouped') {
+    	marker.addTo(groups[counter])
+      } else if (markergrouping == 'single') {
+      	layers.push(marker);
+      }
+
+      filename = "/article/2020-02-23-1834-pennsylvania-ave"
+      if (items[filename] == undefined) {
+      items[filename] = [marker];
+      } else {
+      items[filename].push(marker);
+      }
+
+
+
+      marker.on('click', function(){
+        post_url = "/#/article/2020-02-23-1834-pennsylvania-ave";
+        article_url = '/article/2020-02-23-1834-pennsylvania-ave';
+        item_id = "/article/2020-02-23-1834-pennsylvania-ave";
+        window.location = (post_url);
+        articlerender(article_url, item_id);
+
+      });
+
+      
+      lat = 34.06771;
+      lng = -118.26229;
+
+      if ($(window).height() < 600 || $(window).width() < 550){
+      content = "<strong>1647 Cortez...</strong>";
+      } else {
+      content = "<strong>1647 Cortez St.</strong><br>1647 Cortez St, Los Angeles, CA";
+      }
+
+      var iconurl = "" + icons[counter]
+      var mbox = L.icon({
+            iconUrl: iconurl,
+            iconSize : [46, 50],
+            iconAnchor : [17, 36],
+            popupAnchor : [-1, 8]
+          });
+      var marker = L.marker([lat, lng], {
+        icon: mbox,
+      }).bindPopup(content, {offset:new L.Point(0,-30)});
+      marker.iconURL = iconurl;
+
+      if (markergrouping == 'grouped') {
+    	marker.addTo(groups[counter])
+      } else if (markergrouping == 'single') {
+      	layers.push(marker);
+      }
+
+      filename = "/article/2020-02-23-1647-cortez-st"
+      if (items[filename] == undefined) {
+      items[filename] = [marker];
+      } else {
+      items[filename].push(marker);
+      }
+
+
+
+      marker.on('click', function(){
+        post_url = "/#/article/2020-02-23-1647-cortez-st";
+        article_url = '/article/2020-02-23-1647-cortez-st';
+        item_id = "/article/2020-02-23-1647-cortez-st";
+        window.location = (post_url);
+        articlerender(article_url, item_id);
+
+      });
+
+      
+      lat = 34.042933;
+      lng = -118.222593;
+
+      if ($(window).height() < 600 || $(window).width() < 550){
+      content = "<strong>Gless St...</strong>";
+      } else {
+      content = "<strong>Gless St</strong><br>Gless St, Los Angeles, CA";
+      }
+
+      var iconurl = "" + icons[counter]
+      var mbox = L.icon({
+            iconUrl: iconurl,
+            iconSize : [46, 50],
+            iconAnchor : [17, 36],
+            popupAnchor : [-1, 8]
+          });
+      var marker = L.marker([lat, lng], {
+        icon: mbox,
+      }).bindPopup(content, {offset:new L.Point(0,-30)});
+      marker.iconURL = iconurl;
+
+      if (markergrouping == 'grouped') {
+    	marker.addTo(groups[counter])
+      } else if (markergrouping == 'single') {
+      	layers.push(marker);
+      }
+
+      filename = "/article/2020-02-21-gless-st"
+      if (items[filename] == undefined) {
+      items[filename] = [marker];
+      } else {
+      items[filename].push(marker);
+      }
+
+
+
+      marker.on('click', function(){
+        post_url = "/#/article/2020-02-21-gless-st";
+        article_url = '/article/2020-02-21-gless-st';
+        item_id = "/article/2020-02-21-gless-st";
+        window.location = (post_url);
+        articlerender(article_url, item_id);
+
+      });
+
+      
+      lat = 34.10384;
+      lng = -118.345873;
+
+      if ($(window).height() < 600 || $(window).width() < 550){
+      content = "<strong>7200 Franklin...</strong>";
+      } else {
+      content = "<strong>7200 Franklin Ave</strong><br>7200 Franklin Ave, Los Angeles, CA";
+      }
+
+      var iconurl = "" + icons[counter]
+      var mbox = L.icon({
+            iconUrl: iconurl,
+            iconSize : [46, 50],
+            iconAnchor : [17, 36],
+            popupAnchor : [-1, 8]
+          });
+      var marker = L.marker([lat, lng], {
+        icon: mbox,
+      }).bindPopup(content, {offset:new L.Point(0,-30)});
+      marker.iconURL = iconurl;
+
+      if (markergrouping == 'grouped') {
+    	marker.addTo(groups[counter])
+      } else if (markergrouping == 'single') {
+      	layers.push(marker);
+      }
+
+      filename = "/article/2020-02-21-7200-franklin-ave"
+      if (items[filename] == undefined) {
+      items[filename] = [marker];
+      } else {
+      items[filename].push(marker);
+      }
+
+
+
+      marker.on('click', function(){
+        post_url = "/#/article/2020-02-21-7200-franklin-ave";
+        article_url = '/article/2020-02-21-7200-franklin-ave';
+        item_id = "/article/2020-02-21-7200-franklin-ave";
+        window.location = (post_url);
+        articlerender(article_url, item_id);
+
+      });
+
+      
+      lat = 34.10056;
+      lng = -118.320827;
+
+      if ($(window).height() < 600 || $(window).width() < 550){
+      content = "<strong>6021 Carlton...</strong>";
+      } else {
+      content = "<strong>6021 Carlton Way</strong><br>6021 Carlton Way, Los Angeles, CA";
+      }
+
+      var iconurl = "" + icons[counter]
+      var mbox = L.icon({
+            iconUrl: iconurl,
+            iconSize : [46, 50],
+            iconAnchor : [17, 36],
+            popupAnchor : [-1, 8]
+          });
+      var marker = L.marker([lat, lng], {
+        icon: mbox,
+      }).bindPopup(content, {offset:new L.Point(0,-30)});
+      marker.iconURL = iconurl;
+
+      if (markergrouping == 'grouped') {
+    	marker.addTo(groups[counter])
+      } else if (markergrouping == 'single') {
+      	layers.push(marker);
+      }
+
+      filename = "/article/2020-02-21-6021-carlton-way"
+      if (items[filename] == undefined) {
+      items[filename] = [marker];
+      } else {
+      items[filename].push(marker);
+      }
+
+
+
+      marker.on('click', function(){
+        post_url = "/#/article/2020-02-21-6021-carlton-way";
+        article_url = '/article/2020-02-21-6021-carlton-way';
+        item_id = "/article/2020-02-21-6021-carlton-way";
+        window.location = (post_url);
+        articlerender(article_url, item_id);
+
+      });
+
+      
+      lat = 34.100564;
+      lng = -118.31938;
+
+      if ($(window).height() < 600 || $(window).width() < 550){
+      content = "<strong>5943 Carlton...</strong>";
+      } else {
+      content = "<strong>5943 Carlton Way</strong><br>5943 Carlton Way, Los Angeles, CA";
+      }
+
+      var iconurl = "" + icons[counter]
+      var mbox = L.icon({
+            iconUrl: iconurl,
+            iconSize : [46, 50],
+            iconAnchor : [17, 36],
+            popupAnchor : [-1, 8]
+          });
+      var marker = L.marker([lat, lng], {
+        icon: mbox,
+      }).bindPopup(content, {offset:new L.Point(0,-30)});
+      marker.iconURL = iconurl;
+
+      if (markergrouping == 'grouped') {
+    	marker.addTo(groups[counter])
+      } else if (markergrouping == 'single') {
+      	layers.push(marker);
+      }
+
+      filename = "/article/2020-02-21-5943-carlton-way"
+      if (items[filename] == undefined) {
+      items[filename] = [marker];
+      } else {
+      items[filename].push(marker);
+      }
+
+
+
+      marker.on('click', function(){
+        post_url = "/#/article/2020-02-21-5943-carlton-way";
+        article_url = '/article/2020-02-21-5943-carlton-way';
+        item_id = "/article/2020-02-21-5943-carlton-way";
+        window.location = (post_url);
+        articlerender(article_url, item_id);
+
+      });
+
+      
+      lat = 34.099449;
+      lng = -118.308508;
+
+      if ($(window).height() < 600 || $(window).width() < 550){
+      content = "<strong>5443 Harold...</strong>";
+      } else {
+      content = "<strong>5443 Harold Way</strong><br>5443 Harold Way, Los Angeles, CA";
+      }
+
+      var iconurl = "" + icons[counter]
+      var mbox = L.icon({
+            iconUrl: iconurl,
+            iconSize : [46, 50],
+            iconAnchor : [17, 36],
+            popupAnchor : [-1, 8]
+          });
+      var marker = L.marker([lat, lng], {
+        icon: mbox,
+      }).bindPopup(content, {offset:new L.Point(0,-30)});
+      marker.iconURL = iconurl;
+
+      if (markergrouping == 'grouped') {
+    	marker.addTo(groups[counter])
+      } else if (markergrouping == 'single') {
+      	layers.push(marker);
+      }
+
+      filename = "/article/2020-02-21-5443-harold-way"
+      if (items[filename] == undefined) {
+      items[filename] = [marker];
+      } else {
+      items[filename].push(marker);
+      }
+
+
+
+      marker.on('click', function(){
+        post_url = "/#/article/2020-02-21-5443-harold-way";
+        article_url = '/article/2020-02-21-5443-harold-way';
+        item_id = "/article/2020-02-21-5443-harold-way";
+        window.location = (post_url);
+        articlerender(article_url, item_id);
+
+      });
+
+      
+      lat = 34.09945;
+      lng = -118.308191;
+
+      if ($(window).height() < 600 || $(window).width() < 550){
+      content = "<strong>5433 Harold...</strong>";
+      } else {
+      content = "<strong>5433 Harold Way</strong><br>5433 Harold Way, Los Angeles, CA";
+      }
+
+      var iconurl = "" + icons[counter]
+      var mbox = L.icon({
+            iconUrl: iconurl,
+            iconSize : [46, 50],
+            iconAnchor : [17, 36],
+            popupAnchor : [-1, 8]
+          });
+      var marker = L.marker([lat, lng], {
+        icon: mbox,
+      }).bindPopup(content, {offset:new L.Point(0,-30)});
+      marker.iconURL = iconurl;
+
+      if (markergrouping == 'grouped') {
+    	marker.addTo(groups[counter])
+      } else if (markergrouping == 'single') {
+      	layers.push(marker);
+      }
+
+      filename = "/article/2020-02-21-5433-harold-way"
+      if (items[filename] == undefined) {
+      items[filename] = [marker];
+      } else {
+      items[filename].push(marker);
+      }
+
+
+
+      marker.on('click', function(){
+        post_url = "/#/article/2020-02-21-5433-harold-way";
+        article_url = '/article/2020-02-21-5433-harold-way';
+        item_id = "/article/2020-02-21-5433-harold-way";
+        window.location = (post_url);
+        articlerender(article_url, item_id);
+
+      });
+
+      
+      lat = 34.099451;
+      lng = -118.308099;
+
+      if ($(window).height() < 600 || $(window).width() < 550){
+      content = "<strong>5429 Harold...</strong>";
+      } else {
+      content = "<strong>5429 Harold Way</strong><br>5429 Harold Way, Los Angeles, CA";
+      }
+
+      var iconurl = "" + icons[counter]
+      var mbox = L.icon({
+            iconUrl: iconurl,
+            iconSize : [46, 50],
+            iconAnchor : [17, 36],
+            popupAnchor : [-1, 8]
+          });
+      var marker = L.marker([lat, lng], {
+        icon: mbox,
+      }).bindPopup(content, {offset:new L.Point(0,-30)});
+      marker.iconURL = iconurl;
+
+      if (markergrouping == 'grouped') {
+    	marker.addTo(groups[counter])
+      } else if (markergrouping == 'single') {
+      	layers.push(marker);
+      }
+
+      filename = "/article/2020-02-21-5429-harold-way"
+      if (items[filename] == undefined) {
+      items[filename] = [marker];
+      } else {
+      items[filename].push(marker);
+      }
+
+
+
+      marker.on('click', function(){
+        post_url = "/#/article/2020-02-21-5429-harold-way";
+        article_url = '/article/2020-02-21-5429-harold-way';
+        item_id = "/article/2020-02-21-5429-harold-way";
+        window.location = (post_url);
+        articlerender(article_url, item_id);
+
+      });
+
+      
+      lat = 34.109954;
+      lng = -118.292304;
+
+      if ($(window).height() < 600 || $(window).width() < 550){
+      content = "<strong>4711 Ambrose...</strong>";
+      } else {
+      content = "<strong>4711 Ambrose Ave</strong><br>4711 Ambrose Ave, Los Angeles, CA";
+      }
+
+      var iconurl = "" + icons[counter]
+      var mbox = L.icon({
+            iconUrl: iconurl,
+            iconSize : [46, 50],
+            iconAnchor : [17, 36],
+            popupAnchor : [-1, 8]
+          });
+      var marker = L.marker([lat, lng], {
+        icon: mbox,
+      }).bindPopup(content, {offset:new L.Point(0,-30)});
+      marker.iconURL = iconurl;
+
+      if (markergrouping == 'grouped') {
+    	marker.addTo(groups[counter])
+      } else if (markergrouping == 'single') {
+      	layers.push(marker);
+      }
+
+      filename = "/article/2020-02-21-4711-ambrose-ave"
+      if (items[filename] == undefined) {
+      items[filename] = [marker];
+      } else {
+      items[filename].push(marker);
+      }
+
+
+
+      marker.on('click', function(){
+        post_url = "/#/article/2020-02-21-4711-ambrose-ave";
+        article_url = '/article/2020-02-21-4711-ambrose-ave';
+        item_id = "/article/2020-02-21-4711-ambrose-ave";
+        window.location = (post_url);
+        articlerender(article_url, item_id);
+
+      });
+
+      
+      lat = 34.06611;
+      lng = -118.34524;
+
+      if ($(window).height() < 600 || $(window).width() < 550){
+      content = "<strong>425 S...</strong>";
+      } else {
+      content = "<strong>425 S Detroit St</strong><br>425 S Detroit St, Los Angeles, CA";
+      }
+
+      var iconurl = "" + icons[counter]
+      var mbox = L.icon({
+            iconUrl: iconurl,
+            iconSize : [46, 50],
+            iconAnchor : [17, 36],
+            popupAnchor : [-1, 8]
+          });
+      var marker = L.marker([lat, lng], {
+        icon: mbox,
+      }).bindPopup(content, {offset:new L.Point(0,-30)});
+      marker.iconURL = iconurl;
+
+      if (markergrouping == 'grouped') {
+    	marker.addTo(groups[counter])
+      } else if (markergrouping == 'single') {
+      	layers.push(marker);
+      }
+
+      filename = "/article/2020-02-21-425-s-detroit-st"
+      if (items[filename] == undefined) {
+      items[filename] = [marker];
+      } else {
+      items[filename].push(marker);
+      }
+
+
+
+      marker.on('click', function(){
+        post_url = "/#/article/2020-02-21-425-s-detroit-st";
+        article_url = '/article/2020-02-21-425-s-detroit-st';
+        item_id = "/article/2020-02-21-425-s-detroit-st";
+        window.location = (post_url);
+        articlerender(article_url, item_id);
+
+      });
+
+      
+      lat = 34.10746;
+      lng = -118.32543;
+
+      if ($(window).height() < 600 || $(window).width() < 550){
+      content = "<strong>2017 N...</strong>";
+      } else {
+      content = "<strong>2017 N ARGYLE AVE</strong><br>2017 N Argyle Ave, Los Angeles, CA";
+      }
+
+      var iconurl = "" + icons[counter]
+      var mbox = L.icon({
+            iconUrl: iconurl,
+            iconSize : [46, 50],
+            iconAnchor : [17, 36],
+            popupAnchor : [-1, 8]
+          });
+      var marker = L.marker([lat, lng], {
+        icon: mbox,
+      }).bindPopup(content, {offset:new L.Point(0,-30)});
+      marker.iconURL = iconurl;
+
+      if (markergrouping == 'grouped') {
+    	marker.addTo(groups[counter])
+      } else if (markergrouping == 'single') {
+      	layers.push(marker);
+      }
+
+      filename = "/article/2020-02-21-2017-n-argyle-ave"
+      if (items[filename] == undefined) {
+      items[filename] = [marker];
+      } else {
+      items[filename].push(marker);
+      }
+
+
+
+      marker.on('click', function(){
+        post_url = "/#/article/2020-02-21-2017-n-argyle-ave";
+        article_url = '/article/2020-02-21-2017-n-argyle-ave';
+        item_id = "/article/2020-02-21-2017-n-argyle-ave";
+        window.location = (post_url);
+        articlerender(article_url, item_id);
+
+      });
+
+      
+      lat = 34.10294;
+      lng = -118.33462;
+
+      if ($(window).height() < 600 || $(window).width() < 550){
+      content = "<strong>1746 NORTH...</strong>";
+      } else {
+      content = "<strong>1746 NORTH CHEROKEE AVENUE</strong><br>1746 N Cherokee Ave, Los Angeles, CA";
+      }
+
+      var iconurl = "" + icons[counter]
+      var mbox = L.icon({
+            iconUrl: iconurl,
+            iconSize : [46, 50],
+            iconAnchor : [17, 36],
+            popupAnchor : [-1, 8]
+          });
+      var marker = L.marker([lat, lng], {
+        icon: mbox,
+      }).bindPopup(content, {offset:new L.Point(0,-30)});
+      marker.iconURL = iconurl;
+
+      if (markergrouping == 'grouped') {
+    	marker.addTo(groups[counter])
+      } else if (markergrouping == 'single') {
+      	layers.push(marker);
+      }
+
+      filename = "/article/2020-02-21-1746-north-cherokee-avenue"
+      if (items[filename] == undefined) {
+      items[filename] = [marker];
+      } else {
+      items[filename].push(marker);
+      }
+
+
+
+      marker.on('click', function(){
+        post_url = "/#/article/2020-02-21-1746-north-cherokee-avenue";
+        article_url = '/article/2020-02-21-1746-north-cherokee-avenue';
+        item_id = "/article/2020-02-21-1746-north-cherokee-avenue";
+        window.location = (post_url);
+        articlerender(article_url, item_id);
+
+      });
+
+      
       lat = 34.01;
       lng = -118.270375;
 
