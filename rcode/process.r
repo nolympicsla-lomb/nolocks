@@ -15,7 +15,7 @@ library(airtabler)
 library(rgeocodio)
 library(glue)
 
-#load environment variables / API keys
+#load environment variables:  API keys for geocodio and airtable
 source(".//.env")
 
 ## functions
@@ -55,22 +55,16 @@ data_gc <- gio_batch_geocode(paste(data_filter$Address, ", Los Angeles CA"))
 #combine wide data pulled from api 
 data_gc_all <- bind_cols(data_filter, data_gc %>% select(-response_warnings))
 
-#check if post_process_indicator is 
-# run_add <- function(data){(
-
-for (n in 1:NROW(data_gc_all)) {
+for (n in 1:NROW(data_gc_all)) {                                  #check if post_process_indicator is 1, ie only do new posts
     if (data_gc_all$post_process_indicator[n] == 0) {
       air_record <- data_gc_all$id[[n]]
       print(paste("doing record", air_record, ' #', n, '/', NROW(data_gc_all)))
       
       record_data_gc_all <- list(
-          # id = air_record,
           latitude = data_gc_all[n,]$response_results[[1]]$location.lat[1],
           longitude = data_gc_all[n,]$response_results[[1]]$location.lng[1],
           address_clean = data_gc$formatted_address[[n]],
           post_process_indicator = 1)
-        # check.names = FALSE,
-        # stringsAsFactors = FALSE)
         air_update(sub_base, "Submissions", record_id = air_record, record_data_gc_all)
         print(paste("updating airtable with ", air_record))
         Sys.sleep(50)
@@ -78,12 +72,12 @@ for (n in 1:NROW(data_gc_all)) {
       data_gc_all$post_process_indicator[n] = 1
       
       ## parameters for posts
-      title = data_gc_all[n,]$Address
-      postdate = as.Date(data_gc_all[n,]$createdTime)
+      title = dQuote( data_gc_all[n,]$Address )
+      postdate = as.Date( data_gc_all[n,]$createdTime )
       address = data_gc_all[n,]$address_clean
       lat = data_gc_all[n,]$response_results[[1]]$location.lat[1]
       long = data_gc_all[n,]$response_results[[1]]$location.lng[1]
-      formatted_address = data_gc_all$formatted_address[n]
+      formatted_address = dQuote( data_gc_all$formatted_address[n] )
       StoryField = data_gc_all[n,]$StoryField
       pic1 = data_gc_all$Attachments[[n]][6][[1]][[2]][[1]]
       #pic2...9
@@ -110,7 +104,7 @@ runningtitle: "Running title here"
 desc: {formatted_address}
 ---
 **Address**
-Property at {formatted_address}
+{formatted_address}
 
 **Story**
 {StoryField}
@@ -127,7 +121,7 @@ StoryField = "",
 pic1 = ""  # XXX add default picture
 )
 
-      writeLines(out, paste0(".//posts//",postdate,stringr::str_trim(title),".md"))
+      writeLines(out, paste0(".//_posts//",postdate,stringr::str_trim(title),".md"))
      
     }  
 
