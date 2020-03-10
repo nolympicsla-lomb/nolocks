@@ -117,11 +117,11 @@ desc: {formatted_address}
    {{:.caption}}',
 
 #  
-StoryField = "",
+StoryField = "", # default storyfield?
 pic1 = ""  # XXX add default picture
 )
 
-      writeLines(out, paste0(".//_posts//",postdate,stringr::str_trim(title),".md"))
+      writeLines(out, paste(".//_posts//",postdate,stringr::str_trim(title),".md", sep = "-"))
      
     }  
 
