@@ -1,23 +1,18 @@
 ---
 layout: post
-title: 1746 NORTH CHEROKEE AVENUE
-date: 2020-02-21
+title: x
+date: y
 categories: ["user-submitted"]
 author: "nolympics"
-lat: 34.10294
+lat: lat
 lng: -118.33462
 runningtitle: "Running title here"
-desc: 1746 N Cherokee Ave, Los Angeles, CA
+desc: addy
 ---
 **Address**
-Property at 1746 N Cherokee Ave, Los Angeles, CA
+addy
 
 **Story**
 
 
 **Pictures**
-
-![Image title]()
-    {:.image}
-
-   {:.caption}
