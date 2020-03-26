@@ -55,8 +55,8 @@ for (n in 1:NROW(data_gc_all)) {                                 #check if post_
       address = data_gc_all[n,]$address_clean
       lat = data_gc_all[n,]$response_results[[1]]$location.lat[1]
       long = data_gc_all[n,]$response_results[[1]]$location.lng[1]
-      formatted_address = dQuote( data_gc_all$formatted_address[n] )
-      StoryField = data_gc_all[n,]$StoryField
+      formatted_address = data_gc_all$formatted_address[n]
+      StoryField = ifelse( is.na(data_gc_all[n,]$StoryField) == TRUE, " " , data_gc_all[n,]$StoryField) 
       
       datos = list()
       if( is.null( data_gc_all$Attachments[[n]][6][[1]][[2]][[1]] ) == FALSE) {  
@@ -90,14 +90,14 @@ desc: {formatted_address}
 **Pictures**
 
 
-',
-            StoryField = "",
-            title = "x",
-            postdate = "y",
-            lat = "lat",
-            ong = "long",
-            formatted_address = "addy"
-            )
+')
+            # StoryField = "",
+            # title = "x",
+            # postdate = "y",
+            # lat = "lat",
+            # long = "long",
+            # formatted_address = "addy"
+            
 # checks for pictures can be no pictures or multiple pictures
       
       output_piece_n <- list()
