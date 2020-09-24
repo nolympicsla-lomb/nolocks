@@ -10,14 +10,9 @@ runningtitle: "Running title here"
 desc: 1746 N Cherokee Ave, Los Angeles, CA
 ---
 **Address**
-Property at 1746 N Cherokee Ave, Los Angeles, CA
+1746 N Cherokee Ave, Los Angeles, CA
 
 **Story**
-
+Canterbury Suites Apt, RSO building turned into hotel / short term stay https://thecanterburysuites.com/
 
 **Pictures**
-
-![Image title]()
-    {:.image}
-
-   {:.caption}

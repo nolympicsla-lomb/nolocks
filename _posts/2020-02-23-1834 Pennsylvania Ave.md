@@ -10,14 +10,14 @@ runningtitle: "Running title here"
 desc: 1834 Pennsylvania Ave, Los Angeles, CA
 ---
 **Address**
-Property at 1834 Pennsylvania Ave, Los Angeles, CA
+1834 Pennsylvania Ave, Los Angeles, CA
 
 **Story**
-
+ 
 
 **Pictures**
 
-![Image title]()
-    {:.image}
-
+ ![Image title](https://dl.airtable.com/.attachmentThumbnails/805951014688b2cdb6c556c76d7ed2f8/251e9edd)
+   {:.image}
+Picture 1, 1834 Pennsylvania Ave, Los Angeles, CA
    {:.caption}
